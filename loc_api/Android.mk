@@ -1,4 +1,4 @@
-ifneq ($(filter yukon rhine shinano kanuti kitakami loire tone,$(PRODUCT_PLATFORM)),)
+ifeq ($(SONY_AOSP), true)
 
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 
