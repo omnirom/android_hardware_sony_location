@@ -1,3 +1,5 @@
+ifneq ($(USE_DEVICE_SPECIFIC_LOC_API),true)
+
 ifneq ($(filter yukon rhine shinano kanuti kitakami loire tone,$(PRODUCT_PLATFORM)),)
 
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
@@ -22,4 +24,6 @@ include $(call all-subdir-makefiles)
 endif #is-board-platform-in-list
 
 endif#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE
-endif
+endif#PRODUCT_PLATFORM
+
+endif#USE_DEVICE_SPECIFIC_LOC_API
